@@ -231,6 +231,23 @@ python inference_with_SGLang.py
 - [Firefly](https://github.com/yangjianxin1/Firefly) - 易用高效的训练框架
 - 我的钱包 - 为API调用和算力提供资金支持
 
+## 📌 Citation
+如果本仓库对你的学习或研究有帮助，欢迎引用：
+```
+@misc{hit-nlp-2025a-sft,
+  title  = {HIT-NLP 2025 Autumn – SFT on MiniCPM4 with Local Chinese Data},
+  author = {Course Project Team},
+  year   = {2025},
+  note   = {Harbin Institute of Technology, NLP Course, Experiment 2},
+  url    = {https://github.com/your-repo-url}
+}
+```
+
+## 🧰 联系方式
+
+见主页
+复现问题：欢迎提 Issue 或 PR
+
 ## 📄 许可证
 
 本项目基于MIT许可证开源。
