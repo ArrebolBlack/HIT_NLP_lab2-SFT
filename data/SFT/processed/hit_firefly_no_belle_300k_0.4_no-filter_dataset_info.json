@@ -1,0 +1,36 @@
+{
+  "sources": {
+    "hit_kept": 1142,
+    "firefly_kept": 250000
+  },
+  "allocated": {
+    "hit": 1142,
+    "firefly": 250000
+  },
+  "final_count": 251108,
+  "hit_ratio_target": 0.4,
+  "firefly_path": "/root/autodl-tmp/Exp2/data/SFT/raw/firefly/firefly/firefly_no_belle.json",
+  "hit_paths": [
+    "/root/autodl-tmp/Exp2/data/SFT/raw/hit/hit_ds_chat.jsonl"
+  ],
+  "near_dup_threshold_bits": null,
+  "params": {
+    "min_chinese_ratio": 0.6,
+    "length_limits": {
+      "instruction": [
+        20,
+        200
+      ],
+      "input": [
+        20,
+        300
+      ],
+      "output": [
+        80,
+        1200
+      ]
+    },
+    "drop_max_urls": 5,
+    "drop_pii": false
+  }
+}
