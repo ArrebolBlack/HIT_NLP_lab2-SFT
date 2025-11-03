@@ -58,8 +58,8 @@ BASE_URL_CODE = "https://api.deepseek.com"  # 例如 "https://api.deepseek.com";
 # 其它运行参数（留空/None则不覆盖命令行）
 MODEL_CODE = "deepseek-chat"            # 例如 "deepseek-chat" 或 "deepseek-reasoner"
 MODE_CODE = "chat"             # "chat" / "reasoner"
-OUT_CODE = "E:/PE_Exam_2025_Autumn/code/gen_SFT_output/generated_data.jsonl"              # 例如 "data/raw/hit/train.jsonl"
-TOPICS_FILE_CODE =  "E:/PE_Exam_2025_Autumn/code/gen_SFT_output/topics.txt"    # 例如 "topics.txt"
+OUT_CODE = "gen_SFT_output/generated_data.jsonl"              # 例如 "data/raw/hit/train.jsonl"
+TOPICS_FILE_CODE =  "gen_SFT_output/topics.txt"    # 例如 "topics.txt"
 N_PER_TOPIC_CODE = 6      # 例如 6
 MAX_CONCURRENCY_CODE = 50  # 例如 8
 TEMPERATURE_CODE = 0.8      # 例如 0.8
