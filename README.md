@@ -201,14 +201,44 @@ python inference_with_SGLang.py
 
 ## 📁 项目结构
 ```
-├── LLM_data_gen/           # 数据生成脚本
-├── data/
-│   ├── raw/               # 原始数据
-│   └── processed/         # 处理后的数据
-├── scripts/               # 训练和推理脚本
-├── configs/               # 训练配置文件
-└── models/                # 训练好的模型
+HIT_NLP_lab2-SFT
+├─data
+│  └─SFT
+│     ├─raw                 # 原始 SFT 数据（Firefly + HIT 自建数据）
+│     │  ├─firefly
+│     │  └─hit
+│     └─processed           # 清洗 & 合并后的数据 + conversation 格式
+│
+├─Firefly                   # Firefly 训练框架（fork + 修改）
+│  ├─train_args             # 训练配置（full / lora / qlora）
+│  ├─output                 # 各模式训练输出（含 logs / runs / checkpoints）
+│  ├─checkpoint             # 最终合并后的完整模型（可直接推理）
+│  ├─script                 # chat / eval / deployment scripts
+│  └─component              # dataloader / collator / template / trainer 组件
+│
+├─LLM_data_gen              # HIT 自建数据生成模块
+│  └─gen_SFT_output         # LLM 生成的原始 JSONL 输出
+│
+├─models
+│  └─minicpm05b             # MiniCPM4 0.5B base 模型文件
+│
+└─sglang                    # SGLang 部署 & 推理后端（完整 codebase）
+   └─sglang/                # SGLang 源码、测试、docs、examples、kernels 等
 ```
+
+## ✅ 说明
+| 目录                    | 作用                                            |
+| --------------------- | --------------------------------------------- |
+| `data/SFT/raw/`       | 原始 SFT 数据集 (自建 HIT + Firefly)                 |
+| `data/SFT/processed/` | 清洗/重采样/去重/ChatML → conversation 转换后           |
+| `Firefly/train_args/` | SFT & DPO 配置（full / LoRA / QLoRA）             |
+| `Firefly/output/`     | 训练过程输出 + tensorboard logs                     |
+| `Firefly/checkpoint/` | 合并后的最终模型（用于部署）                                |
+| `LLM_data_gen/`       | HIT prompt → LLM → 自建 SFT pipeline            |
+| `models/minicpm05b/`  | MiniCPM4 0.5B 初始权重                            |
+| `sglang/`             | 推理框架（stream + batch + router + OpenAI API 模式） |
+
+
 
 ## ⚠️ 注意事项
 
