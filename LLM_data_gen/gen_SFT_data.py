@@ -52,7 +52,7 @@ from openai import AsyncOpenAI
 # ==== CONFIG（可选，直接在这里写死；留空则不覆盖）====
 # =========================================================
 # 🔒 建议仅在个人环境使用，避免把密钥提交到仓库。
-API_KEY_CODE = "sk-e3ae81b250c74be690f85e02a5a2a7b9"  # 例如 "sk-xxxxxxxxxx"; 留空则不用 # gen_SFT
+API_KEY_CODE = ""  # 例如 "sk-xxxxxxxxxx"; 留空则不用 # gen_SFT
 BASE_URL_CODE = "https://api.deepseek.com"  # 例如 "https://api.deepseek.com"; 留空则不用
 
 # 其它运行参数（留空/None则不覆盖命令行）
